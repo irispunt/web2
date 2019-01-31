@@ -830,7 +830,7 @@ article a {
     }
 }
 
-@media only screen and (max-width: 37.563px) {
+@media only screen and (max-width: 37.563em) {
     .headerslider {
         padding-left: 1em;
         margin-bottom: 1em;
