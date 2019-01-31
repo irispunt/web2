@@ -586,15 +586,10 @@ article a {
 
 
 
-/*@media screen and (min-width: 600px) {
-    .boxes {
-        display: flex;
-    }
-*/
-/*========================================================================================== media*/
+/* ========================================================================================== media*/
 
 
-@media only screen and (max-width: 101.25em) {
+@media only screen and (max-width: 64em) {
 
 
     .top {
@@ -830,7 +825,7 @@ article a {
     }
 }
 
-@media only screen and (max-width: 37.563em) {
+@media only screen and (max-width: 37.6em) {
     .headerslider {
         padding-left: 1em;
         margin-bottom: 1em;
@@ -852,7 +847,7 @@ article a {
 }
 
 .login {
-    background-color: aliceblue
+    background-color: aliceblue;
 }
 
 .login-screen {
