@@ -268,7 +268,6 @@ ul {
 
 .tab1 form {
     display: flex;
-    flex-direction: column;
 }
 
 .tab1,
@@ -744,6 +743,11 @@ article a {
 }
 
 @media only screen and (max-width: 50em) {
+
+    .tab1 form,
+    .tab2 form {
+        flex-direction: column;
+    }
     .slijm {
         top: 4em;
     }
