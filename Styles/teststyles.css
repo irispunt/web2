@@ -1,0 +1,168 @@
+/* TODO: animate heart filling up */
+
+$size: 30px;
+
+body {
+    background: #c0ebea;
+    font-family: "Helvetica", Arial, sans-serif;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    margin-top: -($size * 1.65)/2;
+    margin-left: -($size * 2)/2;
+}
+
+.heart {
+    width: $size * 2;
+    height: $size * 1.65;
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: $size;
+        top: 0;
+        width: $size;
+        height: $size * 1.65;
+        background: #fff;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+
+    &:after {
+        @extend .heart:before;
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+}
+
+.beating {
+    animation: beating .5s 1 alternate;
+
+    &:before,
+    &:after {
+        background: #FF3016;
+    }
+}
+
+@keyframes beating {
+    0% {
+        transform: scale(1)
+    }
+
+    40% {
+        transform: scale(1.25)
+    }
+
+    70% {
+        transform: scale(.9)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+
+
+/*
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.menu-container {
+    position: absolute;
+    width: 7rem;
+    height: 5rem;
+    overflow: hidden;
+    transition-delay: .3s;
+}
+
+.menu {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(6, 24, 61);
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+}
+
+#hamburger {
+    display: none;
+}
+
+label {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    cursor: pointer;
+    padding: 30px;
+}
+
+label:before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    width: 1em;
+    height: 0.15em;
+    background: white;
+    box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white;
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+#hamburger:checked ~ .menu-container {
+    width: 20vw;
+    height: 100vh;
+    transition-delay: 0s;
+}
+
+#hamburger:checked ~ .menu-container .menu {
+    width: 250vh;
+    height: 250vh;
+    transition: all .3s;
+}
+
+.menu-container .links {
+    position: absolute;
+    left: 5vw;
+    top: 27vh;
+    transform: translate(-50%, -50%);
+}
+
+.menu-container .links a {
+    display: block;
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0.4rem;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.content {
+    padding: 10rem;
+    transition: all .2s;
+    transition-delay: .1s;
+}
+
+
+#hamburger:checked ~ .content {
+    padding-left: 35vw;
+    transition: all .2s;
+    transition-delay: 0s;
+}

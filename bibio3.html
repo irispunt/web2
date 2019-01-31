@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+    <title>Verhalen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles/Styles.css" type="text/css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="top">
+        <div>
+            <img src="Image/logo.svg" alt="logo" />
+            <p>verhalensite</p>
+        </div>
+        <nav class="navheader">
+            <div id="menuToggle">
+                <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+                <input type="checkbox" />
+
+                <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="bibio.html">Bibiotheek</a></li>
+                    <li><a href="login.html">Inloggen</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <!-- EINDE HEADER -->
+    <!-- HEADER FOTO -->
+    <section class="headerslider">
+        <h1>Anders dan normaal?</h1>
+        <a href="Index.html">Verras mij</a>
+    </section>
+
+    <!-- EINDE HEADER FOTO -->
+    <section class="boxes">
+        <a href="bibio.html">Laatste gelezen verhalen</a>
+        <a href="bibio2.html">Opgeslagen verhalen</a>
+        <a href="bibio3.html" class="active">Nog niet afgelezen verhalen</a>
+    </section>
+    <section class="cards">
+
+
+        <article class="verhaal">
+            <img src="Image/poepen.jpg" alt="poepen">
+            <header>
+                <hr width="60px" />
+                <h4>Poepen</h4>
+                <div>
+                    <a ref="Index.html">BEKIJKEN</a>
+
+                    <button id="heart">❤</button>
+                </div>
+            </header>
+        </article>
+        <article class="verhaal">
+            <img src="Image/para.jpeg" alt="poepen">
+            <header>
+                <hr class="leesstand" width="20px" />
+                <h4>Paranoia</h4>
+                <div>
+                    <a href="#">BEKIJKEN</a>
+
+                    <button id="heart">❤</button>
+                </div>
+            </header>
+        </article>
+
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <hr />
+    </footer>
+    <!-- EINDE FOOTER -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,938 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    margin: 0 auto;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+h2 {
+    color: white;
+    margin: .625em 0px .625em 0px;
+}
+
+h3 {
+
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.4rem;
+}
+
+h3:after {
+    content: "";
+    display: block;
+    height: .1em;
+    width: 2em;
+    background-color: rgb(124, 211, 223);
+    margin: 1em auto 0px;
+}
+
+footer {
+    margin-bottom: 4em;
+    margin-top: 6em;
+}
+
+a {
+    font-size: 1em;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(251, 221, 15);
+    box-shadow: rgb(210, 184, 43) 0em .2em 0em 0em, rgba(0, 0, 0, 0.2) 0em .2em .2em 0em;
+    color: rgb(85, 86, 90);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: .1em;
+    border-style: none;
+    padding: 1em;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+
+/* header */
+.top {
+    background-color: #06183D;
+    width: 100%;
+    display: flex;
+    height: 10.5em;
+}
+
+.top div {
+    position: absolute;
+    top: 2.5em;
+    left: 5em;
+    width: 15em;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.top div p {
+    font-weight: 100;
+    font-size: 1.3em;
+    margin-top: .5em;
+    letter-spacing: .1em;
+}
+
+.slijm {
+    position: absolute;
+    top: 10.5em;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    text-align: center;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.slijm.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: unset;
+    z-index: -1;
+}
+
+.poep {
+    margin: 0 auto;
+    height: 34.4em;
+}
+
+.poep.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: unset;
+}
+
+.bookmark1,
+.bookmark2 {
+    cursor: pointer;
+    width: 1em;
+    margin-top: -7.9em;
+    display: block;
+}
+
+.groterbook {
+    transform: scaleY(1.5);
+    margin-top: -7.5em;
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
+.tekst hr {
+    margin-top: 7.8em;
+    margin-bottom: 7.8em;
+    height: .1em;
+    background-color: gray;
+    width: 100%;
+}
+
+.verhaallees span {
+    width: 27em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+    display: block;
+    margin-top: 37.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.verhaallees span.sticky {
+    margin-top: 40em;
+}
+
+.verhaallees {
+    text-align: center;
+    width: 75em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.verhaallees p {
+    margin-top: 10em;
+    font-size: 2em;
+    align-content: center;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.5em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navheader {
+    top: 5.2em;
+    max-width: 22.5em;
+    position: absolute;
+    right: 40em;
+}
+
+.navheader ul {
+    background-color: rgb(6, 24, 61);
+    display: flex;
+}
+
+.navheader a {
+    background-color: #192A4C;
+    color: #FFF;
+    box-shadow: none;
+    padding: 1.3em;
+    padding-bottom: 1.3em;
+    border-style: none;
+    border-radius: 0px;
+    text-transform: capitalize;
+    font-weight: 100;
+    font-size: .9em;
+    letter-spacing: 0.15em;
+}
+
+.navheader a:hover {
+    font-size: 1em;
+}
+
+.navheader li {
+    color: white;
+    text-align: left;
+    text-decoration: none;
+}
+
+/* headerslide foto */
+
+.headerslider {
+    width: 100%;
+    height: 22em;
+    background-image: url("../image/above-aerial-aerial-view-991012.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: .3em solid rgb(36, 181, 201);
+    padding-left: 10em;
+    padding-top: 7em;
+    margin-bottom: 5em;
+}
+
+.headerslider h1 {
+    margin: 0;
+    color: white;
+    top: 10%;
+    font-size: 2em;
+    max-width: 18.75em;
+    font-style: normal;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    line-height: 0.95em;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+/* filteren*/
+
+.pc-tab {
+    min-width: 19em;
+    width: 100%;
+    border-radius: 0em 0em .5em .5em;
+    margin: 0em auto;
+    max-width: 66em;
+}
+
+.pc-tab > input,
+.pc-tab section > div {
+    display: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tab1 form div {
+    width: 28.2em;
+    padding-top: .9em;
+}
+
+.tab1 form {
+    display: flex;
+}
+
+.tab1,
+.tab2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: .9em 1.1em;
+    color: black;
+    border-width: .1em .1em .1em;
+    border-style: solid solid none;
+    border-color: rgba(6, 24, 61, 0.8) rgba(6, 24, 61, 0.8) rgba(6, 24, 61, 0.8);
+    border-bottom: none;
+
+}
+
+.tab2 h4 {
+    margin: .2em;
+    font-size: 2.375em;
+}
+
+.tags {
+    display: flex;
+
+}
+
+.tags li {
+    padding: 0.188em;
+    list-style-type: none;
+}
+
+.tags a {
+    font-size: 1em;
+    background-color: rgb(251, 221, 15);
+    box-shadow: rgb(210, 184, 43) 0em .1em 0em 0em, rgba(0, 0, 0, 0.2) 0em .1em .1em 0em;
+    color: rgb(85, 86, 90);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-style: none;
+    text-decoration: none;
+}
+
+/* bovenste tabs */
+#tab1:checked ~ nav .tab1,
+#tab2:checked ~ nav .tab2 {
+    background-color: rgba(6, 24, 61, 0.8);
+    color: white;
+    position: relative;
+    border-bottom: none;
+
+
+}
+
+#tab1:hover ~ nav .tab1,
+#tab2:hover ~ nav .tab2 {
+    background-color: rgba(6, 24, 61, 0.8);
+    color: white;
+    border-bottom: none;
+
+}
+
+/* onderste vakjes */
+
+#tab1:checked ~ section .tab1 {
+    display: block;
+    clear: both;
+    width: 100%;
+    background: rgba(6, 24, 61, 0.8);
+    color: white;
+    border-bottom: none;
+    border-top: none;
+
+}
+
+#tab2:checked ~ section .tab2 {
+    display: block;
+    clear: both;
+    width: 100%;
+    background: rgba(6, 24, 61, 0.8);
+    color: white;
+    border-bottom: none;
+}
+
+
+/* sorteer box */
+.sorteer input[type="checkbox"] {
+    #display: none;
+}
+
+.sorteer ul {
+    display: none;
+}
+
+.sorteer input[type="checkbox"]:checked ~ ul {
+    display: block;
+}
+
+.tab2 form {
+    display: flex;
+}
+
+.drop {
+    font-size: 1em;
+    line-height: 1.5em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(85, 86, 90);
+    position: relative;
+    text-align: left;
+    align-items: center;
+    border-color: transparent;
+    border-style: solid;
+    border-width: .625em;
+    margin: 0em .625em 0em .313em;
+    width: 100%;
+    height: 100%;
+    padding: .313em;
+}
+
+.hidesorteer label:before {
+    content: '';
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    background: transparent;
+    margin-right: .625rem;
+}
+
+.hidesorteer label:after {
+    content: '';
+    width: 1.25rem;
+    height: .7rem;
+    position: absolute;
+    left: .6rem;
+    border-top: none;
+    border-right: none;
+    opacity: 0;
+    transform: rotate(-25deg) skewY(-23deg);
+}
+
+.hidesorteer input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+
+/* verhaal*/
+/* ============================================================ */
+
+.cards {
+    flex-wrap: wrap;
+    max-width: 72.5em;
+    width: calc(100% - 0.938em);
+    transform: none;
+    margin: 0 auto 1.875em;
+    border-spacing: 0.625em 0.313em;
+    display: flex;
+    font-weight: 300;
+    justify-content: center;
+    line-height: 1.375em;
+}
+
+.verhaal h4 {
+    margin: 0;
+    font-size: 2.2em;
+    height: 3.125em;
+}
+
+article {
+    height: 100%;
+    width: 20.375em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px .625em 3px;
+    margin: 1.25em;
+    overflow: hidden;
+}
+
+article img {
+    width: 20.375em;
+    height: 19.938em;
+}
+
+article hr {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.25em;
+    background-color: rgb(124, 211, 223);
+    margin-top: -1.2em;
+    margin-left: -.6em;
+    border: 0;
+}
+
+article header {
+    padding: .625em;
+    height: 7.5em;
+    background-color: #FFF;
+    display: block;
+}
+
+article header h4 {
+    text-align: center;
+    padding-top: 1.2em;
+}
+
+article header div {
+    opacity: 0;
+    display: flex;
+}
+
+article header div a {
+    flex-grow: 5;
+}
+
+article header div button {
+    flex-grow: 2;
+}
+
+article:hover header {
+    transition: 1s;
+    transform: translateY(-100px);
+}
+
+
+article:hover header div {
+    transition: 1s;
+    opacity: 1;
+}
+
+article:hover hr {
+    margin-top: -.7em;
+}
+
+
+#heart {
+    font-weight: 700;
+    background-color: rgb(255, 230, 0);
+    box-shadow: rgb(222, 194, 4) 0em .1em 0em 0em, rgba(0, 0, 0, 0.2) 0em .1em .1em 0em;
+    background-clip: padding-box;
+    color: rgb(85, 86, 90);
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: .2em;
+    padding: .2em;
+    text-decoration: none;
+    justify-content: center;
+    margin: .825em .825em 1.65em .825em;
+    cursor: pointer;
+}
+
+.redheart {
+    color: rgb(255, 0, 0) !important;
+    font-size: 1.6em;
+    padding-top: 0 !important;
+    transition: font-size .4s ease-out;
+    max-height: 1.2em;
+    margin: 0 !important;
+    margin-top: .4em !important;
+}
+
+
+article a {
+    font-weight: 700;
+    background-color: rgb(255, 230, 0);
+    box-shadow: rgb(222, 194, 4) 0em .1em 0em 0em, rgba(0, 0, 0, 0.2) 0em .1em .1em 0em;
+    background-clip: padding-box;
+    color: rgb(85, 86, 90);
+    height: 1.875em;
+    text-align: center;
+    text-transform: uppercase;
+    bottom: 1.25em;
+    display: flex;
+    border-radius: .2em;
+    text-decoration: none;
+    justify-content: center;
+    margin: .625em .625em 1.25em .625em;
+}
+
+/* ============================================================================ */
+
+
+
+.boxes {
+    margin-left: auto;
+    margin-right: auto;
+    width: 51em;
+    display: flex;
+    margin-bottom: 5em;
+}
+
+.boxes a {
+    padding: 1.5em;
+    margin-right: .5em;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #E4E4E4;
+    color: #374664;
+    border-radius: .5em;
+    box-shadow: none;
+    font-weight: 500;
+    width: 22em;
+    text-transform: none;
+}
+
+.boxes .active {
+    outline: none;
+    color: #fff;
+    background-color: #374664;
+}
+
+.boxes a:hover {
+    outline: none;
+    color: #fff;
+    background-color: #374664;
+}
+
+
+
+/*@media screen and (min-width: 600px) {
+    .boxes {
+        display: flex;
+    }
+*/
+/*========================================================================================== media*/
+
+
+@media only screen and (max-width: 101.25em) {
+
+
+    .top {
+        height: 7em;
+    }
+
+    .top div {
+        position: static;
+        margin-top: 1.5em;
+    }
+
+    .pc-tab {
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    }
+
+    #menuToggle {
+        display: block;
+        position: absolute;
+        top: 1.25em;
+        left: 1.25em;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input {
+        display: block !important;
+        width: 6em;
+        height: 6em;
+        position: fixed;
+        top: 1em;
+        left: .2em;
+        cursor: pointer;
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
+    }
+
+    /*
+ * Just a quick hamburger
+ */
+    #menuToggle span {
+        display: block;
+        width: 2.1em;
+        height: .3em;
+        margin-bottom: .3em;
+        position: relative;
+        background: white;
+        border-radius: .1em;
+        z-index: 1;
+        transform-origin: .1em 0;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: white;
+    }
+
+    /*
+ * But let's hide the middle one.
+ */
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    #menu {
+        position: fixed;
+        width: 90%;
+        margin-left: -2em;
+        padding-top: 1.6em;
+        height: 110%;
+        background: rgb(6, 24, 61);
+        list-style-type: none;
+        /* to stop flickering of text in safari */
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: .625em 0;
+        font-size: 1.4em;
+    }
+
+    /*
+ * And let's slide it in from the left
+ */
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+    .logo {
+        top: 1.25em;
+    }
+
+    .navheader {
+        margin-left: 0;
+        margin-top: 0;
+        position: inherit;
+        right: inherit
+    }
+
+    .navheader a {
+        display: block;
+        line-height: 4em;
+    }
+
+    .navheader ul {
+        flex-direction: column;
+    }
+
+    .slijm {
+        top: 7em;
+    }
+
+    .verhaallees {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    .slijm {
+        top: 4em;
+    }
+
+    .verhaallees p {
+        margin-top: 5em;
+    }
+
+    .boxes {
+        width: 22em;
+        flex-direction: column;
+    }
+
+    .boxes a {
+        margin-top: .5em;
+    }
+
+    article {
+        height: auto;
+        display: block;
+    }
+
+    article img {
+        width: 100%;
+    }
+
+
+    .navheader ul {
+        flex-direction: column;
+    }
+
+    .verhaallees {
+        width: 100%;
+    }
+
+    .top {
+        height: 4em;
+    }
+
+    .top div {
+        position: static;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .top div img {
+        height: 4em;
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .top div p {
+        display: none;
+    }
+
+    .poep {
+        height: 400px;
+        width: 90%;
+        margin-top: 2em;
+    }
+
+    .verhaallees span {
+        width: 90%;
+    }
+
+    .verhaallees span.sticky {
+        font-size: 1.3em;
+        margin-top: 800px;
+    }
+
+
+    .verhaallees span img {
+        margin-top: -8em;
+    }
+
+    .groterbook {
+        margin-top: -7.55em !important;
+    }
+}
+
+@media only screen and (max-width: 37.563px) {
+    .headerslider {
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    article img {
+        width: 100%;
+    }
+
+
+}
+
+/*
+===========================================================================================
+ login pagina */
+
+*:focus {
+    outline: none;
+}
+
+.login {
+    background-color: aliceblue
+}
+
+.login-screen {
+    background-color: #FFF;
+    padding: 1.25em;
+    border-radius: 5px;
+    margin: 4.375em auto;
+    width: 18.75em;
+}
+
+.login-form {
+    text-align: center;
+}
+
+
+.login input {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: .2em solid transparent;
+    border-radius: .3em;
+    font-size: 1em;
+    font-weight: 200;
+    padding: .625em;
+    width: 100%;
+    transition: border .5s;
+    margin-bottom: .625em;
+}
+
+input:focus {
+    border: .2em solid #3498DB;
+    box-shadow: none;
+}
+
+input:invalid {
+    border: .2em dashed red;
+}
+
+input:valid {}
+
+.login-link {
+    font-size: .8em;
+    color: #444;
+    display: block;
+    text-align: center;
+    background-color: white;
+    font-weight: 200;
+    box-shadow: none;
+    text-decoration: underline;
+    text-transform: lowercase;
+
+}
+
+.btn {
+    border: .2em solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-size: .9em;
+    background-color: rgb(251, 221, 15);
+    box-shadow: rgb(210, 184, 43) 0em .1em 0em 0em, rgba(0, 0, 0, 0.2) 0em .1em .1em 0em;
+    color: rgb(85, 86, 90);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    border-radius: .3em;
+    border-style: none;
+    padding: 1em;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+
+
+.btn:hover {
+    background-color: #2980B9;
+}
+
+#menuToggle input {
+    display: none;
+}

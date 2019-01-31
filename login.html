@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+    <title>Verhalen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles/Styles.css" type="text/css">
+</head>
+
+<body class="login">
+    <!-- HEADER -->
+    <header class="top">
+        <div>
+            <img src="Image/logo.svg" alt="logo" />
+            <p>verhalensite</p>
+        </div>
+        <nav class="navheader">
+            <div id="menuToggle">
+                <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+                <input type="checkbox" />
+
+                <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="bibio.html">Bibiotheek</a></li>
+                    <li><a href="login.html">Inloggen</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <!-- EINDE HEADER -->
+
+    <!-- MAIN -->
+
+    <section class="login">
+        <article class="login-screen">
+
+            <h3>Inloggen</h3>
+            <form>
+                <input type="email" class="login-field" value="" placeholder="e-mailadres" id="login-name">
+
+                <input type="password" class="login-field" value="" placeholder="wachtwoord" id="login-pass">
+
+                <button class="btn" href="#">Inloggen</button>
+
+                <a class="login-link" href="#">Wachtwoord vergeten?</a>
+                <a class="login-link" href="reg.html">Nog geen account?</a>
+            </form>
+        </article>
+    </section>
+
+
+    <!-- EINDE MAIN -->
+
+</body>
+
+</html>
